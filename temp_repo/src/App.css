@@ -1,0 +1,93 @@
+:root{
+  --bg:#f3f6fb; --card:#fff; --accent:#2563eb; --danger:#ef4444;
+  --muted:#6b7280;
+  font-family: system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#111}
+.app{max-width:900px;margin:28px auto;padding:16px}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+/* header controls */
+.header-controls{display:flex;gap:8px;align-items:center}
+h1{margin:0;font-size:1.6rem}
+.card{background:var(--card);padding:12px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);margin-bottom:12px}
+.btn{background:transparent;border:1px solid #ddd;padding:6px 10px;border-radius:6px;cursor:pointer}
+.btn.primary{background:var(--accent);color:white;border-color:transparent}
+label{display:block;margin:8px 0;font-size:.9rem;color:var(--muted)}
+input,select{width:100%;padding:8px;margin-top:6px;border:1px solid #e5e7eb;border-radius:6px}
+.form-actions{display:flex;gap:8px;margin-top:8px}
+.list{min-height:60px}
+.entry{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #eef}
+.entry .meta{color:var(--muted);font-size:.85rem}
+.entry.expense .amt{color:var(--danger)}
+.entry.income .amt{color:green}
+.summary-row{display:flex;gap:12px;align-items:center}
+.tile{flex:1;padding:8px;border-radius:6px;background:#f8fafc;text-align:center}
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{padding:8px;border-radius:6px;background:#fff;text-align:center;border:1px solid #f1f5f9;min-height:60px}
+.day.has-entry{box-shadow:inset 0 0 0 2px rgba(37,99,235,0.08)}
+.day.exceed{background:rgba(239,68,68,0.08);border-color:rgba(239,68,68,0.15)}
+.small{font-size:.75rem;color:var(--muted);margin-top:6px}
+.modal{position:fixed;left:0;top:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);z-index:9999}
+.modal-content{width:min(720px,95%);max-height:85vh;overflow:auto}
+.form{max-width:480px}
+
+
+
+/* Dark theme */
+body.dark {
+  --bg: #0b1220;
+  --card: #0f1724;
+  --accent: #60a5fa;
+  --danger: #f87171;
+  --muted: #9ca3af;
+  color: #e6eef8;
+  background: var(--bg);
+}
+
+body.dark .card { box-shadow: 0 1px 4px rgba(0,0,0,0.6); }
+body.dark .btn { border-color: rgba(255,255,255,0.06); color: #e6eef8 }
+body.dark .tile { background: #071226 }
+body.dark .day { background: #071226; border-color: rgba(255,255,255,0.04) }
+body.dark .day.exceed { background: rgba(248,113,113,0.08) }
+body.dark .entry.expense .amt { color: var(--danger) }
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+

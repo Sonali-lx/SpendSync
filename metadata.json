@@ -1,0 +1,8 @@
+{
+  "name": "SpendSync",
+  "description": "A sleek, mobile-optimized expense and income tracker with quick entries and calendar insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
